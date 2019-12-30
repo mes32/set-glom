@@ -10,7 +10,7 @@ Combine sets of items on the commandline. This project was built to learn a bit 
 # 1. Clone this repo 
 git clone https://github.com/mes32/set-glom
 
-# 2. Charnge directory into this repo
+# 2. Change directory into cloned repo
 cd set-glom
 
 # 3. Run using Leiningen
