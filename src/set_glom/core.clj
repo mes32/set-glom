@@ -1,6 +1,6 @@
 (ns set-glom.core)
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(defn -main
+  "Combine sets of items on the commandline."
+  []
+  (println "Hello, World!"))
