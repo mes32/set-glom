@@ -3,4 +3,8 @@
 (defn -main
   "Combine sets of items on the commandline."
   []
-  (println "Hello, World!"))
+  (do
+    (print "> ")
+    (flush)
+    (def new-set (read-line))
+    (println (str "You typed: " new-set))))
