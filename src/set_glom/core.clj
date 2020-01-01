@@ -1,10 +1,18 @@
 (ns set-glom.core)
 
-(defn -main
-  "Combine sets of items on the commandline."
+(defn get-line
+  "Get one line of input from the user (via CLI)"
   []
   (do
     (print "> ")
     (flush)
-    (def new-set (read-line))
-    (println (str "You typed: " new-set))))
+    (read-line)))
+
+(defn -main
+  "Read in sets of items from the command line. Combine the sets as needed."
+  []
+  (loop [line nil]  
+    (when (not= line "quit")
+      (def new-line (get-line))
+      (println new-line)    
+      (recur new-line))))
