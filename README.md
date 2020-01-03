@@ -1,5 +1,5 @@
 # Set Glom
-Combine sets of items on the commandline. This project was built to learn a bit about Clojure and work with mathematical sets.
+Combine sets of items on the commandline. I built this project to learn a bit about Clojure and work with mathematical sets.
 
 ## Requirements
 - Clojure

@@ -11,7 +11,7 @@
 (defn parse-set
   "Parse a space delimited string of items and return those items in a hash-set"
   [string]
-  (set (clojure.string/split string #"\s+")))
+  (set (clojure.string/split (clojure.string/trim string) #"\s+")))
 
 (defn glom-sets
   "For now just prints the new set to add, and returns the initial vector of sets"
