@@ -1,4 +1,6 @@
 (ns set-glom.core)
+(def split clojure.string/split)
+(def trim clojure.string/trim)
 
 (defn get-line
   "Get one line of input from the user (via CLI)"
@@ -11,7 +13,7 @@
 (defn parse-set
   "Parse a space delimited string of items and return those items in a hash-set"
   [string]
-  (set (clojure.string/split (clojure.string/trim string) #"\s+")))
+  (set (split (trim string) #"\s+")))
 
 (defn glom-sets
   "For now just prints the new set to add, and returns the initial vector of sets"
