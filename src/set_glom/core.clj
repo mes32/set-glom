@@ -19,10 +19,10 @@
 (defn display-sets
   "Expects a list of sets and prints each set with nice formatting"
   [sets]
-  ; (map
-  ;   (fn [item] (println (str "  {" (clojure.string/join ", " item) "}")))
-  ;   sets))
-  (println sets))
+  (loop [sets sets]
+    (when (not-empty sets)
+      (println (str "  {" (string/join ", " (first sets)) "}"))
+      (recur (rest sets)))))
 
 (defn glom-sets
   "Given two sets 'target' and 'additional'. Returns the union if they have intersecting items. Otherwise returns the target set unchanged."
