@@ -20,6 +20,12 @@ cd set-glom
 lein run
 ```
 
+## Testing
+```bash
+# Run unit tests in /test/set_glom/core_test.clj
+lein test
+```
+
 ## Example Usage
 At the command prompt `> ` the user can enter sets. Then the program prints the current list of sets followed by another command prompt. Typing `quit` at the command prompt will end the program.
 
@@ -41,7 +47,7 @@ Sets are entered as space delimited strings of elements. If set is entered that 
 > quit
 ```
 
-Above the user first enters `1 2 3`, followed by `4 5` followed by `aaa bbb`. Since each of these sets are disjoint (there are no shared elements), three sets are echoed back to the user. Next the user enters `bbb 5 7`. This new set bridges the sets `{aaa, bbb}` and `{4, 5}` also intorducing the new element `7`. This results in a new set composed of all of these elements. The set `{1, 2, 3}` is unchanged.
+Above the user first enters `1 2 3`, followed by `4 5` followed by `aaa bbb`. Since each of these sets are disjoint (there are no shared elements), three sets are echoed back to the user. Next the user enters `bbb 5 7`. This new set bridges the sets `{aaa, bbb}` and `{4, 5}` also introducing the new element `7`. This results in a new set composed of all of these elements. The set `{1, 2, 3}` is unchanged.
 
 ## References
 - [https://clojuredocs.org/](https://clojuredocs.org/)
