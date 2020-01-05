@@ -1,4 +1,7 @@
 # Set Glom
+
+![Language](https://img.shields.io/github/languages/top/mes32/set-glom.svg?style=flat-square) ![RepoSize](https://img.shields.io/github/repo-size/mes32/set-glom.svg?style=flat-square)
+
 Combine sets of items on the commandline. I built this project to learn a bit about Clojure and work with mathematical sets.
 
 ## Requirements
