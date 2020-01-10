@@ -34,7 +34,7 @@ Sets are entered as space delimited strings of elements. If set is entered that 
 ```clojure
 > 1 2 3
   {3, 1, 2}
-> 4 5
+> 4 5 5
   {4, 5}
   {3, 1, 2}
 > aaa bbb
@@ -47,7 +47,11 @@ Sets are entered as space delimited strings of elements. If set is entered that 
 > quit
 ```
 
-Above the user first enters `1 2 3`, followed by `4 5` followed by `aaa bbb`. Since each of these sets are disjoint (there are no shared elements), three sets are echoed back to the user. Next the user enters `bbb 5 7`. This new set bridges the sets `{aaa, bbb}` and `{4, 5}` also introducing the new element `7`. This results in a new set composed of all of these elements. The set `{1, 2, 3}` is unchanged.
+Above the user first enters `1 2 3`, a set containing the elements is echoed back `{3, 1, 2}`. Note that mathematical sets do not have a concept of element order and Clojure's hash-set data structure returns elements in arbitrary order. Then the user enters `4 5 5`. Since elements in a set are by definition unique this echos the set `{4, 5}`. Then the user enters `aaa bbb`. Since these three entered sets are disjoint (no elements in common), three sets are echoed back to the user.
+
+Next the user enters `bbb 5 7`. This new set bridges the sets `{aaa, bbb}` and `{4, 5}` also introducing the new element `7`. This results in a new set composed of all all five of those elements `{4, 7, 5, aaa, bbb}`. The previously entered set `{3, 1, 2}` remains distinct.
+
+Finally the user enters `quit` and the command line program exits.
 
 ## References
 - [https://clojuredocs.org/](https://clojuredocs.org/)
